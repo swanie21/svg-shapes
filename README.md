@@ -49,7 +49,7 @@ Shorthand styling:
 style="fill:#2882f9;stroke:#000;stroke-width:3"
 ```
 
-### Create a Circle
+## Create a Circle
 
 ```
 <svg width="110" height="100">
@@ -63,7 +63,7 @@ style="fill:#2882f9;stroke:#000;stroke-width:3"
 
 `r` property defines the radius, which is the length of a line segment from the center to the perimeter  
 
-### Create an Ellipse
+## Create an Ellipse
 
 ```
 <svg width="160" height="120">
@@ -77,7 +77,7 @@ style="fill:#2882f9;stroke:#000;stroke-width:3"
 
 `ry` property defines the height of the ellipse
 
-### Create a Rectangle
+## Create a Rectangle
 
 ```
 <svg width="140" height="100">
@@ -87,7 +87,7 @@ style="fill:#2882f9;stroke:#000;stroke-width:3"
 
 If you want to create rounded corners you will need to add `rx` and `ry` properties  
 
-### Create a Line
+## Create a Line
 
 ```
 <svg height="100" width="100" viewBox="0 0 100 100">
@@ -99,7 +99,7 @@ If you want to create rounded corners you will need to add `rx` and `ry` propert
 
 `x2` (x-axis) and `y2` (y-axis) define the ending point of the line  
 
-### Create a Polyline
+## Create a Polyline
 
 ```
 <svg height="100" width="100" viewBox="0 0 100 100">
@@ -108,3 +108,40 @@ If you want to create rounded corners you will need to add `rx` and `ry` propert
 ```  
 
 Using the x-axis and y-axis you can set coordinates to create shapes with lines
+
+## Create a Path
+
+```
+<svg height="100" width="100">
+  <path d="M 10 40 C 90 -30 100 90 20 100 L 90 100 Z" fill="none" stroke="#000" stroke-width="3" />
+</svg>
+```
+
+`<path>` element is a custom shape with curves, lines and arcs; imagine drawing a shape with a virtual pen going from point to point  
+
+The `<path>` element can be grouped by wrapping the `<path>` elements in `<g>` tags
+
+```
+<svg height="100" width="100">
+  <g>
+    <path fill="none" stroke="#000" stroke-width="8" d="m 5,20 90,0" />
+    <path fill="none" stroke="#000" stroke-width="8" d="m 5,45 90,0" />
+    <path fill="none" stroke="#000" stroke-width="8" d="m 5,70 90,0" />
+  </g>
+</svg>
+```
+
+The `<path>` element takes specific commands with the `d` property, which you can think of the `d` representing the *path data*
+
+* M = move to  
+* L = line to
+* V = vertical line   
+* H = horizontal line
+* C = curve to  
+* S = smooth curve to  
+* Q = quadratic Bézier curve  
+* T = smooth quadratic Bézier curve
+* A = elliptical arc  
+* Z = close path  
+
+*Uppercase letters represent `absolute` coordinate positioning and lowercase letters represent `relative` coordinate positioning based on the previous coordinate
