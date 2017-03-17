@@ -5,6 +5,14 @@ body {
   justify-content: center;
 }
 
+section {
+  width: 80%;
+}
+
 svg {
   margin: 15px;
+}
+
+.title {
+  width: 100%;
 }
