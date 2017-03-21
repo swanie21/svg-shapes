@@ -17,3 +17,15 @@ svg {
   margin: 20px 0 0 0;
   width: 100%;
 }
+
+@media screen and (max-width: 420px) {
+  svg {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  section {
+    width: 90%;
+  }
+}
