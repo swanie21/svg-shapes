@@ -17,7 +17,7 @@ The `<svg>` element can be embedded right into the HTML
 ```
 <body>
   <svg width=" " height=" ">
-    // element
+    // element shape
   </svg>
 </body>
 ```
@@ -47,7 +47,25 @@ fill="#2882f9" stroke="#000" stroke-width="3"
 Shorthand styling:
 ```
 style="fill:#2882f9;stroke:#000;stroke-width:3"
+```  
+
+An important concept to understand with SVGs is the `viewport` and `viewBox`.  
+
+The `viewport` is the rectangular region of the SVG canvas, which is the viewing area the user will see. It is set by specifying the `width` and `height` properties of the SVG, which in turn determines the area of the coordinate system. By default the unit length is in pixels, but you can also use: `em`, `mm`, `pc`, `in` and `%`. The coordinate system starts in the top-left corner (0,0). If you increase the x-coordinate, the object will move towards the right. If you increase the y-coordinate, the object will move downwards.   
+
 ```
+<svg width="100" height="100">  
+  //element
+</svg>
+```  
+
+The `viewBox` is initially placed on top of the `viewport`, but can be stretched or displaced to change the viewable region. The `viewBox` property takes four values: `min-x`, `min-y`, `width` and `height`.  
+
+```
+<svg width="100" height="100" viewBox="0 0 100 100">  
+  //element
+</svg>
+```  
 
 ## Create a Circle
 
