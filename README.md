@@ -164,4 +164,6 @@ The `<path>` element takes specific commands with the `d` property, which you ca
 * A = elliptical arc  
 * Z = close path  
 
-*Uppercase letters represent `absolute` coordinate positioning and lowercase letters represent `relative` coordinate positioning based on the previous coordinate
+*Uppercase letters represent `absolute` coordinate positioning and lowercase letters represent `relative` coordinate positioning based on the previous coordinate*  
+
+Some helpful libraries to animate SVGs are [Snap.svg](http://snapsvg.io/) and [GreenSock](https://greensock.com/)
